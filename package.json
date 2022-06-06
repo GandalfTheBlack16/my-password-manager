@@ -2,7 +2,7 @@
   "name": "my-password-manager",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "scripts": {
     "dev": "tsnd --exit-child --transpile-only src/main.ts"
   },
