@@ -1,5 +1,5 @@
 import { Express } from 'express';
-import HealthCheckController from '../controllers/healthchek.controller';
+import HealthCheckController from '../controllers/HealthcheckGetController';
 import logger from '../utils/logger';
 
 export const register = (app: Express) => {
