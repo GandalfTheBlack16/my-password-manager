@@ -1,14 +1,26 @@
 import { Request, Response } from "express";
+import httpStatus from "http-status";
 import { registerUser } from "../services/user.service";
+import logger from "../utils/logger";
 import IController from "./IController";
 
 export default class UserPostController implements IController{
     
-    run(req: Request, res: Response): Promise<void> {
-        const input = req.body;
-        // const user = registerUser();
-        //TODO: Sign JWT and attach it to cookie response
-        throw new Error("Method not implemented.");
+    async run(req: Request, res: Response): Promise<void> {
+        try {
+            const { email, password } = req.body;
+            const user = await registerUser({ email, password });
+            
+            //TODO: Sign JWT and attach it to cookie response
+            
+            res.status(httpStatus.CREATED).json(user);
+        } catch (err){
+            logger.error(err);
+            res.status(httpStatus.INTERNAL_SERVER_ERROR).json({
+                status: 'Error',
+                message: 'Internal Server Error'
+            });
+        }
     }
 
 }

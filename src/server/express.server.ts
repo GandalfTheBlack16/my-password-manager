@@ -1,4 +1,4 @@
-import express, { Application, json, Router, Request, Response } from "express";
+import express, { Application, Router, Request, Response } from "express";
 import httpStatus from "http-status";
 import { registerRoutes } from "../routes";
 import logger from "../utils/logger";
@@ -11,6 +11,9 @@ export default class ExpressServer {
     constructor(port: string){
         this.port = port;
         this.app = express();
+        
+        this.app.use(express.json());
+        
         const router = Router();
         
         this.app.use(router);
