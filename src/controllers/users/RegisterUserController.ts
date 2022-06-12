@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
 import httpStatus from "http-status";
-import { genSalt, registerUser } from "../services/user.service";
-import { createVault } from "../services/vault.service";
-import logger from "../utils/logger";
-import IController from "./IController";
+import { genSalt, registerUser } from "../../services/user.service";
+import { createVault } from "../../services/vault.service";
+import logger from "../../utils/logger";
+import IController from "../IController";
 
-export default class UserPostController implements IController{
+export default class RegisterUserController implements IController{
     
     async run(req: Request, res: Response): Promise<void> {
         try {

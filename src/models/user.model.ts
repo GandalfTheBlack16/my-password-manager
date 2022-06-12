@@ -3,7 +3,7 @@ import argon2d from 'argon2';
 
 @pre<User>('save', async function(next){
     if (this.isModified(this.password) || this.isNew){
-        const hash = await argon2d.hash(`${this.email}:${this.password}`);
+        const hash = await argon2d.hash(this.password);
         this.password = hash;
         return next();
     }
