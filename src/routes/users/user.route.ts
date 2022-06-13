@@ -1,7 +1,7 @@
 import { Express } from 'express';
 import { body } from 'express-validator';
-import LoginUserController from '../../controllers/users/LoginUserController';
-import RegisterUserController from '../../controllers/users/RegisterUserController';
+import LoginUserController from '../../controllers/user/login-user.controller';
+import RegisterUserController from '../../controllers/user/register-user.controller';
 import validateInput from '../../middlewares/input-validation.middleware';
 
 export const register = (app: Express) => {

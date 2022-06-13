@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import httpStatus from "http-status";
 import { findUserByEmailPassword } from "../../services/user.service";
 import { findVaultByUser } from "../../services/vault.service";
-import IController from "../IController";
+import IController from "../controller";
 
 export default class LoginUserController implements IController {
     
