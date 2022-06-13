@@ -30,7 +30,7 @@ export default class LoginUserController implements IController {
             });
         } catch (err) {
             res.status(httpStatus.INTERNAL_SERVER_ERROR).json({
-                status: 'Error',
+                status: 'Unknown error',
                 message: err
             });
         }

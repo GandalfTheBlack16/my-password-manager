@@ -21,8 +21,8 @@ export default class RegisterUserController implements IController{
         } catch (err){
             logger.error(err);
             res.status(httpStatus.INTERNAL_SERVER_ERROR).json({
-                status: 'Error',
-                message: 'Internal Server Error'
+                status: 'Unknown error',
+                message: err
             });
         }
     }
