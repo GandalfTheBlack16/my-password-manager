@@ -14,4 +14,4 @@
 
 
 ## Data flow
-<img src="./doc/diagram.png" width="500px" />
+<img src="./doc/application-flow.png" width="500px" />
