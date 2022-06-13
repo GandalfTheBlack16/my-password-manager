@@ -5,5 +5,5 @@ import validateInput from "../../middlewares/input-validation.middleware";
 
 export const register = (app: Express) => {
     const saveVaultCtrl: SaveVaultController = new SaveVaultController();
-    app.post('/api/vault', validateInput([ param('userId').isUUID(), body('vaultData').notEmpty() ]), saveVaultCtrl.run.bind(saveVaultCtrl));
+    app.post('/api/user/:userId/vault', validateInput([ param('userId').isMongoId(), body('vaultData').notEmpty() ]), saveVaultCtrl.run.bind(saveVaultCtrl));
 }
