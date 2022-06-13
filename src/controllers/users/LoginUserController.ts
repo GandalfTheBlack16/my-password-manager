@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import httpStatus from "http-status";
-import { Vault } from "../../models/vault.model";
 import { findUserByEmailPassword } from "../../services/user.service";
 import { findVaultByUser } from "../../services/vault.service";
 import IController from "../IController";

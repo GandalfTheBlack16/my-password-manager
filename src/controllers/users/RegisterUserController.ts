@@ -13,7 +13,7 @@ export default class RegisterUserController implements IController{
             const user = await registerUser({ email, password });
             
             const salt = genSalt();
-            const vault = createVault({ user: user._id, salt });
+            await createVault({ user: user._id, salt });
 
             //TODO: Sign JWT and attach it to cookie response
             

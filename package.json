@@ -10,6 +10,7 @@
     "argon2": "^0.28.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "express-validator": "^6.14.1",
     "glob": "^8.0.3",
     "http-status": "^1.5.2",
     "mongoose": "^6.3.4",
